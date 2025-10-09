@@ -1,35 +1,63 @@
-<!-- TODO 1: Create the HTML Boilerplate -->
 
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
 
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>Rudolf's Portfolio</title>
+  <title>Rudolf </title>
 </head>
 
 <body>
-  <h1>Rudolf's Portfolio</h1>
-  <h2>I'm a Web Developer</h2>
-  <hr />
-  <h3><a href="./movie-ranking.html">Movie Ranking Project</a></h3>
-  <img src="./movie-ranking.png" height="200" alt="movie ranking project preview"/>
-  <h3><a href="./birthday-invite.html">Birthday Invite Project</a></h3>
-  <img src="./birthday-invite.png" height="200" alt="birthday invite project preview"/>
-  <hr />
+  <h1>Rudolf::::eish </h1>
+  <h2>I'm a Developer</h2>
+
+  <h3>Damn i will add some css 😭😭😭😭😭😭😭😭😭😭</h3>
+
+  <h3 color : "pink">send me anonymous message</h3>
+
+  <form id="anon-message-form">
+    <label for="anon-message"></label>
+    <textarea id="anon-message" name="message" rows="4" cols="40" placeholder="Drop your message here..." required></textarea>
+    <button type="submit">Send</button>
+    <p id="anon-message-status"></p>
+  </form>
+
+  <script>
+
+    const FORM_ENDPOINT = "https://formspree.io/f/mrbyyzno";
+
+    const form = document.getElementById("anon-message-form");
+    const statusText = document.getElementById("anon-message-status");
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      statusText.textContent = "Sending...";
+
+      try {
+        const response = await fetch(FORM_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: form.message.value.trim()
+          })
+        });
+
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+
+        form.reset();
+        statusText.textContent = "Your anonymous message was sent.😂";
+      } catch (error) {
+        statusText.textContent = "eish ,please try again later.";
+        console.error(error);
+      }
+    });
+  </script>
+
+  <br>
+
   <a href="./about.html">About Me</a>
   <a href="./contact.html">Contact Me</a>
 </body>
