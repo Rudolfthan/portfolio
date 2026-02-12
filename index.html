@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <header class="hero" id="top">
+  <header class="hero" id="top" data-animate="fade">
     <nav class="site-nav">
       <a class="brand" href="#top">Rudolf</a>
       <button class="nav-toggle" aria-label="Toggle navigation">
@@ -28,11 +28,12 @@
         <a href="#stack">Tech</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#games">Games</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
 
-    <div class="hero-content">
+    <div class="hero-content" data-animate="up" data-animate-group=".hero-copy, .hero-portrait">
       <div class="hero-copy">
         <p class="eyebrow">Data Engineer | Computer science and computer engineering</p>
         <h1>Hi, I'm Tshivhase Thanyani Rudolf.</h1>
@@ -79,7 +80,7 @@ If it involves data, AI or mobile apps, I’m in🫦.
   </header>
 
   <main>
-    <section id="about" class="panel">
+    <section id="about" class="panel" data-animate="up">
       <div class="section-heading">
         <p>Beyond The Screen</p>
         <h2>When I’m not debugging code, I’m debugging my Call of Duty teammates.</h2>
@@ -98,12 +99,12 @@ If it involves data, AI or mobile apps, I’m in🫦.
     </section>
 
 
-    <section id="experience" class="panel contrast">
+    <section id="experience" class="panel contrast" data-animate="up">
       <div class="section-heading">
         <p>Experience</p>
         <h2>Where theory met reality</h2>
       </div>
-      <div class="experience-grid">
+      <div class="experience-grid" data-animate="up" data-animate-group=".experience-card">
         <article class="experience-card">
           <div class="experience-meta">
             <p class="role">Graduate Data Engineer</p>
@@ -140,12 +141,12 @@ If it involves data, AI or mobile apps, I’m in🫦.
       </div>
     </section>
 
-    <section id="stack" class="panel">
+    <section id="stack" class="panel" data-animate="up">
       <div class="section-heading">
         <p>Tech Stack</p>
         <h2>My digital toolbox</h2>
       </div>
-      <ul class="stack-grid">
+      <ul class="stack-grid" data-animate="up" data-animate-group=".stack-card">
         <li class="stack-card">
           <i class="devicon-java-plain" aria-hidden="true"></i>
           <span>Java</span>
@@ -229,12 +230,12 @@ If it involves data, AI or mobile apps, I’m in🫦.
       </ul>
     </section>
 
-    <section id="skills" class="panel contrast">
+    <section id="skills" class="panel contrast" data-animate="up">
       <div class="section-heading">
         <p>Skills</p>
         <h2>👨‍💻</h2>
       </div>
-      <div class="skill-summary">
+      <div class="skill-summary" data-animate="up" data-animate-group=".skill-card">
         <article class="skill-card">
           <h3>Programming Languages</h3>
           <p>Java, Python, SQL, C#.NET, HTML, CSS, React Native, C++, DBMS.</p>
@@ -251,12 +252,12 @@ If it involves data, AI or mobile apps, I’m in🫦.
       </div>
     </section>
 
-    <section id="projects" class="panel">
+    <section id="projects" class="panel" data-animate="up">
       <div class="section-heading">
         <p>Projects</p>
         <h2>Proof that I don’t just watch tutorials</h2>
       </div>
-      <div class="projects-grid">
+      <div class="projects-grid" data-animate="up" data-animate-group=".project-card">
         <article class="project-card">
           <div class="project-meta">
             <p class="project-label">Machine Learning Project (solo)</p>
@@ -315,12 +316,63 @@ If it involves data, AI or mobile apps, I’m in🫦.
       </div>
     </section>
 
-    <section id="contact" class="panel">
+    <section id="games" class="panel contrast" data-animate="up">
+      <div class="section-heading">
+        <p>Playground</p>
+        <h2>Avha awele vho neta nga u vhala ngaha nne😂.Tambani game</h2>
+      </div>
+      <div class="games-grid" data-animate="up" data-animate-group=".game-card">
+        <article class="game-card" data-game="zip">
+          <header class="game-meta">
+            <p class="project-label">Zip </p>
+            <h3>Keep the networking pulse alive</h3>
+          </header>
+          <p class="game-description">Stop the slider while it cruises through the highlighted zone. Each clean zip
+            levels you up and speeds things along.</p>
+          <div class="zip-arena"> 
+            <div class="zip-track" aria-live="polite">
+              <div class="zip-safe-zone"></div>
+              <div class="zip-indicator" role="presentation"></div>
+            </div>
+            <div class="game-controls">
+              <button class="button zip-button" type="button">Start Zip Run</button>
+              <p class="game-status" id="zip-status">Tap start and time your click in the glow.</p>
+              <div class="game-stats">
+                <span>Level <strong id="zip-level">1</strong></span>
+                <span>Best <strong id="zip-best">0</strong></span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="game-card" data-game="stack">
+          <header class="game-meta">
+            <p class="project-label">Stack Tower(still facing bugs,but you can try😔😔)</p>
+            <h3>Build a calm, balanced skyline</h3>
+          </header>
+          <p class="game-description">Drop each moving block right on top of the previous one. Miss the stack and the
+            tower rests.</p>
+          <div class="stack-arena">
+            <canvas id="stack-canvas" width="320" height="260" aria-label="Stack tower play area"></canvas>
+            <div class="game-controls">
+              <button class="button stack-button" type="button">Start Stacking</button>
+              <p class="game-status" id="stack-status">Launch a block and time the drop.</p>
+              <div class="game-stats">
+                <span>Stack <strong id="stack-score">0</strong></span>
+                <span>Best <strong id="stack-best">0</strong></span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="panel" data-animate="up">
       <div class="section-heading">
         <p>Contact</p>
         <h2>I reply faster than your production server!</h2>
       </div>
-      <div class="contact-grid">
+      <div class="contact-grid" data-animate="up" data-animate-group=".contact-card, .contact-form">
         <div class="contact-card">
           <p class="eyebrow">Contact Info</p>
           <ul class="contact-meta">
