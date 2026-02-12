@@ -1,65 +1,354 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <title>Rudolf </title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tshivhase Thanyani Rudolf | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <h1>Rudolf::::eish </h1>
-  <h2>I'm a Developer</h2>
+  <header class="hero" id="top">
+    <nav class="site-nav">
+      <a class="brand" href="#top">Rudolf</a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#stack">Tech</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
 
-  <h3>Damn i will add some css soon 😭😭😭😭😭😭😭😭😭😭</h3>
+    <div class="hero-content">
+      <div class="hero-copy">
+        <p class="eyebrow">Data Engineer | Computer science and computer engineering</p>
+        <h1>Hi, I'm Tshivhase Thanyani Rudolf.</h1>
+        <p class="lede">
+          I’m a Data Engineer based in Cape Town who enjoys turning messy data into systems that actually make sense. I build dashboards and solutions that help businesses make smarter decisions.
 
-  <h3 color : "pink">send me anonymous message</h3>
+I also love mobile development. I enjoy building apps that people can actually use, not just talk about.
 
-  <form id="anon-message-form">
-    <label for="anon-message"></label>
-    <textarea id="anon-message" name="message" rows="4" cols="40" placeholder="Drop your message here..." required></textarea>
-    <button type="submit">Send</button>
-    <p id="anon-message-status"></p>
-  </form>
+I care about clean structure, efficient processes and results you can measure. If something takes 3 hours to run, I’m already thinking about how to make it take 10 minutes.
 
-  <script>
+Still learning. Always improving. Slightly obsessed with fixing chaos in data and building cool things on the side.
 
-    const FORM_ENDPOINT = "https://formspree.io/f/mrbyyzno";
+If it involves data, AI or mobile apps, I’m in🫦.
+        </p>
+        <div class="hero-cta">
+          <a class="button" href="#projects">View projects</a>
+          <a class="secondary" href="https://www.linkedin.com/in/tshivhase-thanyani-rudolf-9248731b4" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+        <ul class="hero-stats">
+          <li>
+            <span class="label">Based in</span>
+            <span class="value">Cape Town, Western Cape, South Africa</span>
+          </li>
+          <li>
+            <span class="label">Education</span>
+            <span class="value">BSc Computer Science & Computer Engineering · University of Cape Town</span>
+          </li>
+          <li>
+            <span class="label">Goal roles</span>
+            <span class="value">Software developer/engineer · Data scientist/Engineer · ML engineer . Mobile Developer</span>
+          </li>
+        </ul>
+      </div>
+      <div class="hero-portrait" aria-label="Random fact">
+        <div class="fact-card">
+          <p class="eyebrow">Random fact</p>
+          <p>I love dogs.</p>
+        </div>
+        <div class="fact-photo">
+          <img src="dog.jpg" alt="Dog I love">
+        </div>
+      </div>
+    </div>
+  </header>
 
-    const form = document.getElementById("anon-message-form");
-    const statusText = document.getElementById("anon-message-status");
+  <main>
+    <section id="about" class="panel">
+      <div class="section-heading">
+        <p>Beyond The Screen</p>
+        <h2>When I’m not debugging code, I’m debugging my Call of Duty teammates.</h2>
+      </div>
+      <div class="section-body split">
+        <p>
 
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      statusText.textContent = "Sending...";
+        </p>
+        <ul class="highlights">
+          <li>🎮 Call of Duty: Mobile player.</li>
+          <li>🥾 Hiking and spending time outdoors.</li>
+          <li>🏓 Table tennis for focus and reflex training.(now looking for place to play in cpt!!!)</li>
 
-      try {
-        const response = await fetch(FORM_ENDPOINT, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            message: form.message.value.trim()
-          })
-        });
+        </ul>
+      </div>
+    </section>
 
-        if (!response.ok) {
-          throw new Error(`Request failed with status ${response.status}`);
-        }
 
-        form.reset();
-        statusText.textContent = "Your anonymous message was sent.😂";
-      } catch (error) {
-        statusText.textContent = "eish ,please try again later.";
-        console.error(error);
-      }
-    });
-  </script>
+    <section id="experience" class="panel contrast">
+      <div class="section-heading">
+        <p>Experience</p>
+        <h2>Where theory met reality</h2>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-card">
+          <div class="experience-meta">
+            <p class="role">Graduate Data Engineer</p>
+            <p class="company">PBT Group</p>
+            <p class="time">Jan 2026 – Present · Cape Town, Western Cape</p>
+          </div>
+          <p class="experience-note">Role listed on my LinkedIn profile as part of the “Data Engineer | Computer
+            science and computer engineering” headline.</p>
+        </article>
+        <article class="experience-card">
+          <div class="experience-meta">
+            <p class="role">Data Collector</p>
+            <p class="company">National Living Wage Study</p>
+            <p class="time">Nov 2022 – Jan 2023 · Dec 2023 – Jan 2024</p>
+          </div>
+          <ul>
+            <li>Conducted accurate data collection for national research studies.</li>
+            <li>Collection Strategy and Data Collection.</li>
+          </ul>
+        </article>
+        <article class="experience-card">
+          <div class="experience-meta">
+            <p class="role">Research Study Assistant</p>
+            <p class="company">National Living Wage Study</p>
+            <p class="time">Nov 2022 – Jan 2023 · Remote · Cape Town</p>
+          </div>
+          <ul>
+            <li>Collection Strategy and Data Collection.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-  <br>
+    <section id="stack" class="panel">
+      <div class="section-heading">
+        <p>Tech Stack</p>
+        <h2>My digital toolbox</h2>
+      </div>
+      <ul class="stack-grid">
+        <li class="stack-card">
+          <i class="devicon-java-plain" aria-hidden="true"></i>
+          <span>Java</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-python-plain" aria-hidden="true"></i>
+          <span>Python</span>
+        </li>
+        <li class="stack-card">
+          <span class="stack-icon">SQL</span>
+          <span>SQL</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-csharp-plain" aria-hidden="true"></i>
+          <span>C#</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-dotnetcore-plain" aria-hidden="true"></i>
+          <span>.NET Framework</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-react-original" aria-hidden="true"></i>
+          <span>React Native</span>
+        </li>
+        <li class="stack-card">
+          <span class="stack-icon">Expo</span>
+          <span>Expo</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-pytorch-plain" aria-hidden="true"></i>
+          <span>PyTorch</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-firebase-plain" aria-hidden="true"></i>
+          <span>Firebase (Auth · Firestore · Storage)</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-nodejs-plain" aria-hidden="true"></i>
+          <span>Node.js</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-express-original" aria-hidden="true"></i>
+          <span>Express</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-html5-plain" aria-hidden="true"></i>
+          <span>HTML</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-css3-plain" aria-hidden="true"></i>
+          <span>CSS</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-cplusplus-plain" aria-hidden="true"></i>
+          <span>C++</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-microsoftsqlserver-plain" aria-hidden="true"></i>
+          <span>SQL Server</span>
+        </li>
+        <li class="stack-card">
+          <span class="stack-icon">DB</span>
+          <span>DBMS</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-git-plain" aria-hidden="true"></i>
+          <span>Git</span>
+        </li>
+        <li class="stack-card">
+          <i class="devicon-vscode-plain" aria-hidden="true"></i>
+          <span>Visual Studio Code</span>
+        </li>
+        <li class="stack-card">
+          <span class="stack-icon">RN</span>
+          <span>React Native Paper</span>
+        </li>
+        <li class="stack-card">
+          <span class="stack-icon">XL</span>
+          <span>Microsoft Excel</span>
+        </li>
+      </ul>
+    </section>
 
-  <a href="./about.html">About Me</a>
-  <a href="./contact.html">Contact Me</a>
+    <section id="skills" class="panel contrast">
+      <div class="section-heading">
+        <p>Skills</p>
+        <h2>👨‍💻</h2>
+      </div>
+      <div class="skill-summary">
+        <article class="skill-card">
+          <h3>Programming Languages</h3>
+          <p>Java, Python, SQL, C#.NET, HTML, CSS, React Native, C++, DBMS.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Tools</h3>
+          <p>Microsoft Excel, Git version control, Visual Studio Code.</p>
+        </article>
+        <article class="skill-card">
+          <h3>Skills</h3>
+          <p>Data Structures, File I/O Operations, User Interface Design, Database Design, Problem Solving, Data
+            Collection Strategy, Front end development, Model training.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" class="panel">
+      <div class="section-heading">
+        <p>Projects</p>
+        <h2>Proof that I don’t just watch tutorials</h2>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-meta">
+            <p class="project-label">Machine Learning Project (solo)</p>
+          </div>
+          <p>Built a feedforward neural network in Python using PyTorch to classify FashionMNIST images.</p>
+          <ul>
+            <li>Implemented data preprocessing, model training, and evaluation using grayscale 28×28 inputs.</li>
+            <li>Developed a command-line interface for classifying user-supplied JPEG images by fashion category.</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-meta">
+            <p class="project-label">FlatShare – Mobile Community Bartering App (group)</p>
+            <a class="project-link" href="https://drive.google.com/file/d/1Uc-WH5bxvIXiNy2ub_IrW0JFtUSAy4/view?usp=sharing" target="_blank" rel="noreferrer">Project link</a>
+          </div>
+          <ul>
+            <li>Designed and developed a cross-platform mobile app (React Native + Expo) enabling residents to barter,
+              lend, donate, or sell items, groceries, and skills.</li>
+            <li>Implemented Firebase Authentication & Firestore for secure role-based access (Resident vs Admin) and
+              real-time data synchronization (chats, posts, notifications).</li>
+            <li>Built marketplace, chats, notifications, and profile features, with admin dashboards for approvals and
+              announcements.</li>
+            <li>Integrated Expo SDKs (image picker, notifications, storage) for smooth media uploads and in-app alerts.</li>
+            <li>Developed a REST API (Node.js + Express) for messaging operations (unread counts, conversation
+              handling).</li>
+            <li>Applied UI/UX principles (React Native Paper) for a modern and accessible interface focused on community
+              resource sharing.</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-meta">
+            <p class="project-label">Hotel Booking Management System (group)</p>
+          </div>
+          <ul>
+            <li>Built a full-stack hotel reservation system using C#.NET and SQL Server.</li>
+            <li>Implemented real-time booking management, payment processing, and reporting features.</li>
+            <li>Worked in a team environment, contributing to database design and functionality delivery.</li>
+          </ul>
+        </article>
+        <article class="project-card">
+          <div class="project-meta">
+            <p class="project-label">React Native Developer – Career Journey App</p>
+          </div>
+          <p>Designed and developed a mobile application built with React Native and Expo to guide Grade 12 students
+            through their career and academic journey with previous exam papers, study guides, bursary information, and
+            internship opportunities.</p>
+          <ul>
+            <li>Structured and integrated Firebase Firestore and Realtime Database for efficient storage and retrieval of
+              educational materials.</li>
+            <li>Set up Node.js backend services to support application logic and extend Firebase capabilities.</li>
+            <li>Optimized the app for performance, responsiveness, and accessibility across devices.</li>
+            <li>Collaborated on features that improved student engagement and access to resources, helping bridge the
+              gap between secondary school and tertiary education.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="panel">
+      <div class="section-heading">
+        <p>Contact</p>
+        <h2>I reply faster than your production server!</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <p class="eyebrow">Contact Info</p>
+          <ul class="contact-meta">
+            <li>Phone: 060 XXX XXXX</li>
+            <li>Email: <a href="mailto:thanyanirudolf21@gmail.com">thanyanirudolf21@gmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/tshivhase-thanyani-rudolf-9248731b4" target="_blank" rel="noreferrer">linkedin.com/in/tshivhase-thanyani-rudolf-9248731b4</a></li>
+            <li>GitHub: <a href="https://github.com/Rudolfthan" target="_blank" rel="noreferrer">github.com/Rudolfthan</a></li>
+          </ul>
+        </div>
+        <form id="contact-form" class="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message" required></textarea>
+
+          <button type="submit" class="button">Send Message</button>
+          <p id="form-status" class="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Tshivhase Thanyani Rudolf❤️</p>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 
 </html>
